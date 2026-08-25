@@ -1,0 +1,11 @@
+# Docker Compose override for local development
+# This file is automatically loaded alongside docker-compose.yml
+
+services:
+  server:
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    command: ["npx", "nodemon", "index.js"]
+    environment:
+      - NODE_ENV=development

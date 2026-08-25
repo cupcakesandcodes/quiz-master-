@@ -1,0 +1,29 @@
+{
+    "name": "ai-quiz-builder-monorepo",
+    "version": "1.0.0",
+    "scripts": {
+        "install:client": "cd client && npm install",
+        "install:server": "cd server && npm install",
+        "build:client": "cd client && npm run build",
+        "install-all": "npm run install:client && npm run install:server",
+        "build": "npm run install-all && npm run build:client",
+        "start": "cd server && npm start",
+        "docker:up": "docker-compose up --build",
+        "docker:down": "docker-compose down",
+        "docker:logs": "docker-compose logs -f"
+    },
+    "description": "![Banner](https://img.shields.io/badge/AI--Quiz--Builder-Powered%20by%20OpenAI-blue?style=for-the-badge&logo=openai)\r ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)\r ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)\r ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)\r ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)\r ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^3.0.3",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1",
+        "jsonwebtoken": "^9.0.3",
+        "mongoose": "^9.0.2",
+        "socket.io": "^4.8.1"
+    }
+}
